@@ -12,9 +12,26 @@ class Migration:
         self.status = status
         self.migration_path = migration_path
         self.path_id = path_id
-        # this is Pythonic for
-        # if animals is not None:
-        #   self.animals = animals
-        # else:
-        #   self.animals = []
-        #self.animals = animals or []
+        #in methods, self is migration_id
+
+    def get_migration_by_id(migration_id: int) -> Migration:
+        pass
+
+    def get_migration_details(migration_id: int) -> dict[str, Any]:
+        pass
+
+    def get_migrations() -> list[Migration]:
+        pass
+
+    def get_migrations_by_current_location(current_location: str) -> list[Migration]:
+        pass
+
+    def get_migrations_by_migration_path(migration_path_id: int) -> list[Migration]:
+        pass
+
+    def get_migrations_by_start_date(start_date: str) -> list[Migration]:
+        pass
+
+    def get_migrations_by_status(status: str) -> list[Migration]:
+        pass
+    
