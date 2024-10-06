@@ -2,7 +2,7 @@ from typing import Any, List, Optional
 
 
 age: Optional[int] = None
-animal_id: int
+animal_id: int #Animal
 animals: dict[int, Animal] = {}
 animals: List[int] = [] #Habitat
 current_date: str
@@ -12,19 +12,19 @@ duration: Optional[int] = None #MigrationPath
 environment_type: str #Habitat
 geographic_area: str #Habitat
 habitat_id: int #Habitat
-habitats: dict[int, Habitat] = {}
+habitats: dict[int, Habitat] = {} #HabitatManager
 health_status: Optional[str] = None
 migration_id: int #Migration
-migration_path: MigrationPath
+migration_path: MigrationPath #Migration
 migrations: dict[int, Migration] = {}
-path_id: int #MigrationPath
+path_id: int #MigrationPath and Migration
 paths: dict[int, MigrationPath] = {}
 size: int #Habitat
 species: str #MigrationPath
 species: str
 start_date: str
 start_location: Habitat #MigrationPath
-status: str = "Scheduled"
+status: str = "Scheduled" #Migration
 
 
 def assign_animals_to_habitat(animals: List[Animal]) -> None:
@@ -37,7 +37,7 @@ def cancel_migration(migration_id: int) -> None:
     pass #MigrationManager
 
 def create_habitat(habitat_id: int, geographic_area: str, size: int, environment_type: str) -> Habitat:
-    pass
+    pass #HabitatManager
 
 def create_migration_path(species: str, start_location: Habitat, destination: Habitat, duration: Optional[int] = None) -> None:
     pass #MigrationPath
@@ -46,25 +46,25 @@ def get_animal_by_id(animal_id: int) -> Optional[Animal]:
     pass #AnimalManager
 
 def get_animal_details(animal_id) -> dict[str, Any]:
-    pass
+    pass #Animal
 
 def get_animals_in_habitat(habitat_id: int) -> List[Animal]:
     pass #Habitat
 
 def get_habitat_by_id(habitat_id: int) -> Habitat:
-    pass
+    pass #HabitatManager
 
 def get_habitat_details(habitat_id: int) -> dict:
     pass #Habitat ***good example for type
 
 def get_habitats_by_geographic_area(geographic_area: str) -> List[Habitat]:
-    pass
+    pass #HabitatManager
 
 def get_habitats_by_size(size: int) -> List[Habitat]:
-    pass
+    pass #HabitatManager
 
 def get_habitats_by_type(environment_type: str) -> List[Habitat]:
-    pass
+    pass #HabitatManager
 
 def get_migration_by_id(migration_id: int) -> Migration:
     pass #Migration
@@ -88,22 +88,22 @@ def get_migration_paths_by_start_location(start_location: Habitat) -> list[Migra
     pass #MigrationPath
 
 def get_migrations() -> list[Migration]:
-    pass
+    pass #Migration
 
 def get_migrations_by_current_location(current_location: str) -> list[Migration]:
-    pass
+    pass #Migration
 
 def get_migrations_by_migration_path(migration_path_id: int) -> list[Migration]:
-    pass
+    pass #Migration
 
 def get_migrations_by_start_date(start_date: str) -> list[Migration]:
-    pass
+    pass #Migration
 
 def get_migrations_by_status(status: str) -> list[Migration]:
-    pass
+    pass #Migration
 
 def get_migration_path_details(path_id) -> dict:
-    pass
+    pass #MigrationPath
 
 def register_animal(animal: Animal) -> None:
     pass #AnimalManager
@@ -112,22 +112,22 @@ def remove_animal(animal_id: int) -> None:
     pass #AnimalManager
 
 def remove_habitat(habitat_id: int) -> None:
-    pass
+    pass #habitatManager
 
 def remove_migration_path(path_id: int) -> None:
     pass #MigrationPath
 
 def schedule_migration(migration_path: MigrationPath) -> None:
-    pass
+    pass #MigrationManager
 
 def update_animal_details(animal_id: int, **kwargs: Any) -> None:
-    pass
+    pass #Animal
 
 def update_habitat_details(habitat_id: int, **kwargs: dict[str, Any]) -> None:
     pass #Habitat
 
 def update_migration_details(migration_id: int, **kwargs: Any) -> None:
-    pass
+    pass #Migration
 
 def update_migration_path_details(path_id: int, **kwargs) -> None:
     pass #MigrationPath

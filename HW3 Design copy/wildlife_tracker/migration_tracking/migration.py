@@ -12,7 +12,6 @@ class Migration:
         self.status = status
         self.migration_path = migration_path
         self.path_id = path_id
-        #in methods, self is migration_id
 
     def get_migration_by_id(migration_id: int) -> Migration:
         pass
@@ -33,5 +32,8 @@ class Migration:
         pass
 
     def get_migrations_by_status(status: str) -> list[Migration]:
+        pass
+    
+    def update_migration_details(migration_id: int, **kwargs: Any) -> None:
         pass
     
