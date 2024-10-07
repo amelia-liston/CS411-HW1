@@ -6,12 +6,14 @@ class Migration:
                 migration_id: int,
                 status: str = "Scheduled",
                 migration_path: MigrationPath,
-                path_id: int
+                path_id: int,
+                current_location: str
                 ) -> None:
         self.migration_id = migration_id
         self.status = status
         self.migration_path = migration_path
         self.path_id = path_id
+        self.current_location = current_location
 
     def get_migration_by_id(migration_id: int) -> Migration:
         pass
