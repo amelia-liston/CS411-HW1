@@ -9,13 +9,18 @@ class Migration:
                 status: str = "Scheduled",
                 migration_path: MigrationPath,
                 path_id: int,
-                current_location: str
+                current_location: str,
+                start_date: str,
+                current_date: str
                 ) -> None:
         self.migration_id = migration_id
         self.status = status
         self.migration_path = migration_path
         self.path_id = path_id
         self.current_location = current_location
+        self.start_date = start_date
+        self.current_date = current_date
+    
 
     def get_migration_by_id(migration_id: int) -> Migration:
         pass

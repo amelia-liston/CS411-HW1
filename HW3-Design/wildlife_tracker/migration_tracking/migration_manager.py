@@ -8,8 +8,8 @@ class MigrationManager:
         migrations: dict[int, Migration] = {}
         paths: dict[int, MigrationPath] = {}
 
-    def cancel_migration(migration_id: int) -> None:
+    def cancel_migration(self, migration_id: int) -> None:
         pass
     
-    def schedule_migration(migration_path: MigrationPath) -> None:
+    def schedule_migration(self, migration_path: MigrationPath) -> None:
         pass

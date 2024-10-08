@@ -4,28 +4,28 @@ from wildlife_tracker.habitat_management.habitat import Habitat
 from wildlife_tracker.migration_tracking.migration import Migration
 from wildlife_tracker.migration_tracking.migration_path import MigrationPath
 
-age: Optional[int] = None
+age: Optional[int] = None #Animal
 animal_id: int #Animal
-animals: dict[int, Animal] = {}
+animals: dict[int, Animal] = {} #Animal Manager
 animals: List[int] = [] #Habitat
-current_date: str
-current_location: str
+current_date: str #Migration
+current_location: str #Migration
 destination: Habitat #MigrationPath
 duration: Optional[int] = None #MigrationPath
 environment_type: str #Habitat
 geographic_area: str #Habitat
 habitat_id: int #Habitat
 habitats: dict[int, Habitat] = {} #HabitatManager
-health_status: Optional[str] = None
+health_status: Optional[str] = None #Animal
 migration_id: int #Migration
 migration_path: MigrationPath #Migration
-migrations: dict[int, Migration] = {}
+migrations: dict[int, Migration] = {} #MigrationManager
 path_id: int #MigrationPath and Migration
-paths: dict[int, MigrationPath] = {}
+paths: dict[int, MigrationPath] = {} #MigrationManager
 size: int #Habitat
 species: str #MigrationPath
-species: str
-start_date: str
+species: str #Animal
+start_date: str #Migration
 start_location: Habitat #MigrationPath
 status: str = "Scheduled" #Migration
 
